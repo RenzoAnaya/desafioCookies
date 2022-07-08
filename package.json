@@ -1,0 +1,30 @@
+{
+  "name": "desafiocookies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "build": "nodemon serverSession.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RenzoAnaya/desafioCookies.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RenzoAnaya/desafioCookies/issues"
+  },
+  "homepage": "https://github.com/RenzoAnaya/desafioCookies#readme",
+  "dependencies": {
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "nodemon": "^2.0.19"
+  }
+}
