@@ -1,6 +1,17 @@
 import { Router } from "express";
+import passport from "passport";
 
 const router = Router()
+
+function isAuth(req,res,next){
+    if(req.isAuthenticated()){
+        next()
+    } else {
+        res.render('loggedIn')
+    }
+}
+
+
 
 const getNombreSession = (req) =>
 req.session.nombre ? req.session.nombre : 'invitado'
@@ -14,8 +25,8 @@ router.post('/session',(req,res)=>{
     for (const key in req.body) {
         req.session[key] = req.body[key]
     }
-    const nombre = req.session.nombre
-    res.render('loggedIn', { nombre });
+    
+    res.render('loggedIn', { nombre: req.session.nombre });
     });
 
 
