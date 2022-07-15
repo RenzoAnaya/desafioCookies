@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(session(
     {
     store: MongoStore.create({ 
-        mongoUrl : 'mongodb+srv://desafiosCoder:desafiosCoder@proyectocoder.jilwab4.mongodb.net/sessionsMongo?retryWrites=true&w=majority',
+        mongoUrl : `mongodb+srv://${MONGO_USER}:${MONGO_PASS}@proyectocoder.jilwab4.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`,
         mongoOptions: adavancedOptions
     }),
     secret:'key',
